@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.4",
-    "jquery": "^3.3.1",
     "metrics-graphics": "^2.15.6",
     "prop-types": "^15.6.2",
     "react": "^15.6.2",
