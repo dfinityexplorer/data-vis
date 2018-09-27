@@ -3,8 +3,8 @@
 Data-vis is used for data visualization experiments and development of charts, graphs, etc. Successful experiments will ultimately be used in the [dfinityexplorer](https://www.dfinityexplorer.org/) web app.
 
 To get started run:
-npm install
-npm start
+* npm install
+* npm start
 
 ### Open-Source Libraries Used
 
