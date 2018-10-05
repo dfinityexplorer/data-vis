@@ -1,11 +1,11 @@
 # dependencies
-/web/node_modules
+node_modules
 
 # testing
-/web/coverage
+coverage
 
 # production
-/web/build
+build
 
 # misc
 .DS_Store
