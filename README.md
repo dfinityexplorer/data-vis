@@ -9,8 +9,6 @@ To get started run:
 ### Open-Source Libraries Used
 
 * React
-* D3
-* Metricsgraphics
 * Styled-Components
 
 ### Code of Conduct
