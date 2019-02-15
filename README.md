@@ -10,6 +10,7 @@ To get started run:
 
 * React
 * Styled-Components
+* ReactApexCharts
 
 ### Code of Conduct
 
