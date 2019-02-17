@@ -20,7 +20,19 @@ class App extends Component {
 
     this.apexOptions = {
       chart: {
-        type: 'line'
+        type: 'line',
+        shadow: {
+          enabled: false,
+          color: '#bbb',
+          top: 3,
+          left: 2,
+          blur: 3,
+          opacity: 1
+        },
+      },
+      stroke: {
+        width: 3,
+        curve: 'smooth'
       },
       xaxis: {
         type: "datetime",
@@ -28,11 +40,34 @@ class App extends Component {
           /**
           * Custom formatter for xaxis labels.
           * @param { String } value The default value generated
-          * @param { Number } timestamp In a datetime series, this is the raw timestamp 
+          * @param { Number } timestamp In a datetime series, this is the raw timestamp
           */
           formatter: (value, timestamp) => {
             return new Date(timestamp).toLocaleDateString();
           }
+        }
+      },
+      fill: {
+        type: 'gradient',
+        gradient: {
+          shade: 'dark',
+          gradientToColors: ['#6aaaf9'],
+          shadeIntensity: 1,
+          type: 'horizontal',
+          opacityFrom: 1,
+          opacityTo: 1,
+          stops: [0, 100, 100, 100]
+        },
+      },
+      markers: {
+        size: 3,
+        opacity: 1,
+        colors: ["#ababab"],
+        strokeColor: "#fff",
+        strokeWidth: 1,
+
+        hover: {
+          size: 7,
         }
       },
       yaxis: {
@@ -51,7 +86,7 @@ class App extends Component {
   }
 
   /**
-   * Invoked by React immediately after a component is mounted (inserted into the tree). 
+   * Invoked by React immediately after a component is mounted (inserted into the tree).
    * @public
    */
   componentDidMount() {
@@ -61,15 +96,15 @@ class App extends Component {
           return {x: candle.timestamp, y: candle.close};
         });
         const apexSeries = [{
-            name: 'BTC Price',
-            data: apexData
+          name: 'BTC Price',
+          data: apexData
         }]
         this.setState({
           apexSeries: apexSeries
         });
     });
   }
-  
+
   /**
    * Return a reference to a React element to render into the DOM.
    * @return {Object} A reference to a React element to render into the DOM.
