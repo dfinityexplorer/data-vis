@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import './App.css';
 import ReactApexChart from "react-apexcharts";
-import NomicsData from './components/NomicsData';
 import axios from 'axios';
-import { readSync } from "fs";
 
 /**
  * Top-level component of the app.
